@@ -2,7 +2,6 @@ import math
 
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
-        #GCF
          
         input = ""
         for a in tokens:
@@ -26,8 +25,8 @@ class Solution:
                     x.pop(i-2)
                     i = 0
                 elif x[i] == "-":
-                    sum = int(numb1) - int(numb2)
-                    x[i] = str(sum)
+                    diff = int(numb1) - int(numb2)
+                    x[i] = str(diff)
                     x.pop(i-1)
                     x.pop(i-2)
                     i = 0
